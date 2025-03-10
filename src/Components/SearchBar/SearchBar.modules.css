@@ -1,0 +1,27 @@
+.search-bar {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background-color: #2C2C2C;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+  }
+  
+  .search-bar input,
+  .search-bar select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+  }
+  
+  .search-bar input {
+    flex: 2;
+  }
+  
+  .search-bar select {
+    flex: 1;
+  }

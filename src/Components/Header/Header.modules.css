@@ -1,0 +1,53 @@
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px; /* Altura fija para el header */
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-highlight)); /* Degradado moderno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    padding: 0 20px; /* Espaciado lateral */
+  }
+  
+  #header h1 {
+    color: var(--color-accent);
+    font-weight: 900;
+    font-size: 2.5rem; /* Tamaño más grande */
+    text-shadow: 
+      -2px -2px 0 var(--color-secondary), 
+      2px -2px 0 var(--color-secondary),  
+      -2px 2px 0 var(--color-secondary),  
+      2px 2px 0 var(--color-secondary); /* Sombra más pronunciada */
+    margin: 0; /* Eliminar margen por defecto */
+  }
+  
+  #header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Espacio entre elementos */
+    align-items: center;
+  }
+  
+  #header nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease; 
+  }
+  
+  #header nav ul li a:hover {
+    color: var(--color-accent); 
+  }
+  
+  .headerIcon {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .headerIcon:hover {
+    color: var(--color-accent); 
+    transform: scale(1.2); 
+  }

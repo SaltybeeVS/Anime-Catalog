@@ -10,6 +10,14 @@
     --color-soft-blue: #B3E5FC; /* Azul pastel: detalles tiernos */
     --color-purple: #9C27B0; /* Morado: toque mágico y vibrante */
   }
+
+  :root {
+    --color-primary: #2A2A72;
+    --color-secondary: #009FFD;
+    --color-accent: #FFA400;
+    --color-text: #2B2B2B;
+  }
+  
 body {
   font-family: 'Nunito', sans-serif;
   background-color: var(--color-background);

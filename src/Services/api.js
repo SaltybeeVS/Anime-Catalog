@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://api.jikan.moe/v4',
+  baseURL: 'https://api.jikan.moe/v4',
 });
 
-export const getAnimeList = async (query) => {
-    const response = await api.get(`/anime?q=${query}`);
-    return response.data;
-}
+export const getAnimeList = async (query = '', page = 1) => {
+  const response = await api.get(`/anime?q=${query}&page=${page}`);
+  return response.data;
+};

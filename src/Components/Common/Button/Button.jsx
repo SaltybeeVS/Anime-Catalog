@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.css';
+import './Button.modules.css';
 
 function Button({ children, onClick, type = 'button', variant = 'primary' }) {
   return (

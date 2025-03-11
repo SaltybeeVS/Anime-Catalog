@@ -6,7 +6,13 @@ function App() {
   return (
     <>
       <Header/>
-      <SearchBar/>
+      <SearchBar
+        onSearch={handleSearch}
+        onRandomSearch={handleRandomSearch}
+        genres={genres}
+        formats={formats}
+        statuses={statuses}
+      />
     </>
   )
 }

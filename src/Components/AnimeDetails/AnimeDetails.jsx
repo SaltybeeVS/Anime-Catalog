@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AnimeDetails.modules.css';
-import { FaStar, FaTv, FaPlayCircle } from "react-icons/fa";
+import { FaStar, FaTv, FaPlayCircle, FaDice } from "react-icons/fa";
+import { getRandomAnime } from '../../Services/api';
 
-
-const AnimeDetails = ({ anime, onClose }) => {
+const AnimeDetails = ({ anime, onClose, onRandom }) => {
   const [details, setDetails] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -19,9 +19,17 @@ const AnimeDetails = ({ anime, onClose }) => {
         setLoading(false);
       }
     };
-    
     fetchDetails();
   }, [anime.mal_id]);
+
+  const handleNewRandom = async () => {
+    try {
+      const newAnime = await getRandomAnime();
+      onRandom(newAnime);
+    } catch (error) {
+      console.error('Error fetching new random anime:', error);
+    }
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -52,7 +60,7 @@ const AnimeDetails = ({ anime, onClose }) => {
                       {details.episodes || 'N/A'} Episodes
                     </span>
                     <span className="meta-item">
-                    <FaStar className='icon'/>
+                      <FaStar className='icon'/>
                       {details.score || 'N/A'}
                     </span>
                   </div>
@@ -96,6 +104,18 @@ const AnimeDetails = ({ anime, onClose }) => {
                         <p>{details.duration || 'N/A'}</p>
                       </div>
                     </div>
+
+                    {onRandom && (
+                      <div className="random-button-container">
+                        <button 
+                          className="random-button-details"
+                          onClick={handleNewRandom}
+                        >
+                          <FaDice className="icon-spacing" />
+                          Ver otro Random
+                        </button>
+                      </div>
+                    )}
 
                     {details.trailer?.url && (
                       <div className="trailer-container">

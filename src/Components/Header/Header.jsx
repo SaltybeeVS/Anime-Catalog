@@ -6,7 +6,7 @@ function Header (){
     return(
         <>
         <header id='header'>
-            <h1>VS AnimeList</h1>
+            <h1><a href="#">VS AnimeList</a></h1>
             <nav>
                 <ul>
                     <li><a href="#"><FaGithub className='headerIcon'/></a></li>

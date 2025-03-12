@@ -112,7 +112,7 @@ const AnimeDetails = ({ anime, onClose, onRandom }) => {
                           onClick={handleNewRandom}
                         >
                           <FaDice className="icon-spacing" />
-                          Ver otro Random
+                          Another Random Anime
                         </button>
                       </div>
                     )}
